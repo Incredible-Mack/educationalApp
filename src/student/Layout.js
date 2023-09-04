@@ -70,9 +70,7 @@ const Layout = () => {
         </div>
 
         <div
-          className={`duration-200 w-3/4 ml-24 ${
-            open && "w-3/4 md:ml-80"
-          }  `}
+          className={`duration-200 w-3/4 ml-24 ${open && "w-3/4 md:ml-80"}  `}
         >
           <Outlet />
         </div>
