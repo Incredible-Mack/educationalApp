@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom"
+import { RootLayout } from "./layout/RootLayout"
+import { Home } from "./pages/Home"
+import Login from "./pages/Login"
+import DashBoard from "./student/Dashboard"
+import Layout from "./student/Layout"
+import { createContext, useState } from "react"
+import Courses from "./student/Courses"
+import VideoPlayer from "./student/VideoPlayer"
 
-function App() {
+export const openContext = createContext()
+
+
+
+export default function App() {
+  const [open, setOpen] = useState(false);
+
+  const router = createBrowserRouter(
+      createRoutesFromElements(
+          <Route path="/" element={<RootLayout />} >
+              <Route index element={ <Home />} />
+              <Route path="login" element={ <Login />} />
+
+              <Route path="student" element={ <Layout />} >
+                 <Route index element={<DashBoard />} />
+                 <Route path="course" element={<Courses />} />
+                 <Route path="video" element={<VideoPlayer />} />
+                 
+              </Route>
+          </Route>
+      )
+  )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <openContext.Provider value={[open, setOpen]} >
+      <RouterProvider router={router}/>
+    </openContext.Provider>
+  )
 }
-
-export default App;
