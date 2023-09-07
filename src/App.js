@@ -7,6 +7,7 @@ import Layout from "./student/Layout"
 import { createContext, useState } from "react"
 import Courses from "./student/Courses"
 import VideoPlayer from "./student/VideoPlayer"
+import Chat from "./student/Chat"
 
 export const openContext = createContext()
 
@@ -25,6 +26,7 @@ export default function App() {
                  <Route index element={<DashBoard />} />
                  <Route path="course" element={<Courses />} />
                  <Route path="video" element={<VideoPlayer />} />
+                 <Route path="chat" element={<Chat />} />
                  
               </Route>
           </Route>

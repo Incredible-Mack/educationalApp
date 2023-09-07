@@ -48,7 +48,7 @@ const Card = ({title, description, count}) => {
 
           <p className="text-2xl text-purple-700 font-bold">{count}</p>
         </div>
-        { toggleInfo &&
+             { toggleInfo &&
                     <div className={`text-xs absolute w-80 border bg-purple-100 p-2 z-[1000] rounded-lg opacity-0 ${toggleInfo && "opacity-100"} transition duration-300 `}>
                         {description}
                     </div>
