@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Menus } from "./Menu";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { openContext } from "../App";
 
 const Layout = () => {
@@ -8,13 +8,13 @@ const Layout = () => {
   // const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-purple-50 ">
+    <div className="bg-blue-50 ">
       <div className="flex  relative">
         {/* Fixed First Div */}
         <div
           className={` ${
             open ? "w-72" : "w-20 "
-          } bg-purple-600 fixed scroll-m-1 overflow-scroll h-screen transition-all z-50 duration-300`}
+          } bg-blue-600 fixed scroll-m-1 overflow-scroll h-screen transition-all z-50 duration-300`}
         >
           {/* icon */}
           <svg
@@ -25,7 +25,7 @@ const Layout = () => {
             stroke="currentColor"
             className={`w-10 h-10 ${
               !open && "rotate-180"
-            } rounded-sm shadow-xl absolute top-0 right-0  text-purple-700 bg-white p-2`}
+            } rounded-sm shadow-xl absolute top-0 right-0  text-blue-700 bg-white p-2`}
             onClick={() => setOpen(!open)}
           >
             <path
@@ -52,19 +52,21 @@ const Layout = () => {
 
           <ul className="pt-6 mt-1">
             {Menus.map((Menu, index) => (
-              <li
-                key={index}
-                className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 
-              ${Menu.gap ? "mt-9" : "mt-2"}  `}
-                title={Menu.title}
-              >
-                {Menu.svgData}
-                <span
-                  className={`${!open && "hidden"} origin-left duration-200`}
+              <NavLink to={Menu.link} key={index}>
+                <li
+                  key={Menu.id}
+                  className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 
+                 ${Menu.gap ? "mt-9" : "mt-2"}  `}
+                  title={Menu.title}
                 >
-                  {Menu.title}
-                </span>
-              </li>
+                  {Menu.svgData}
+                  <span
+                    className={`${!open && "hidden"} origin-left duration-200`}
+                  >
+                    {Menu.title}
+                  </span>
+                </li>
+              </NavLink>
             ))}
           </ul>
         </div>

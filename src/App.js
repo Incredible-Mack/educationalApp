@@ -8,6 +8,9 @@ import { createContext, useState } from "react"
 import Courses from "./student/Courses"
 import VideoPlayer from "./student/VideoPlayer"
 import Chat from "./student/Chat"
+import Assessment from "./student/Assessment"
+import Attendance from "./student/Attendance"
+import Profile, { profileAction } from "./student/Profile"
 
 export const openContext = createContext()
 
@@ -27,6 +30,10 @@ export default function App() {
                  <Route path="course" element={<Courses />} />
                  <Route path="video" element={<VideoPlayer />} />
                  <Route path="chat" element={<Chat />} />
+                 <Route path="assessment" element={<Assessment/>} />
+                 <Route path="attendance" element={<Attendance/>} />
+                 <Route path="profile" element={<Profile/>} action={profileAction} />
+                 <Route path="course/:id" element={}  />
                  
               </Route>
           </Route>
