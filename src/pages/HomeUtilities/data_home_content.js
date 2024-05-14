@@ -48,7 +48,7 @@ export const moreAchievements = [
 export const headingTexts = [
   {
     id: 51,
-    heading: <p className="text-6xl text-purple-50">Meet the Director </p>,
+    heading: <p className="text-6xl text-purple-50">MEET THE CEO AND ISLT DIRECTOR </p>,
   },
 ];
 
@@ -61,8 +61,10 @@ export const meetDirector = [
           I look forward to engaging with the vibrant African and Chinese
           studies communities across the university.”
         </p>
-        <p className="font-bold text-xl text-purple-50">Mack Jame</p>
-        <p className="text-sm italic">The Director</p>
+        <p className="font-bold text-xl text-purple-50">Pastor Yemisi Kudehinbu
+Chief Executive Officer; Loveworld Inc.
+</p>
+        <p className="text-sm italic">Director; ISLT</p>
       </>
     ),
   },
@@ -311,6 +313,39 @@ export const theNews = [
       </>
     ),
   },
- 
   
 ];
+
+export const headingTextsApp = [
+  {
+    id: 51,
+    heading: <p className="text-6xl text-purple-50">APPRECIATION </p>,
+  },
+];
+
+export const meetDirectorApp = [
+  {
+    id: 10,
+    text: (
+      <>
+        {/* <p className="text-6xl md:mt-4 font-text text-purple-50">
+          I look forward to engaging with the vibrant African and Chinese
+          studies communities across the university.”
+        </p> */}
+        <p className="font-bold text-xl text-purple-50">Rev Chris Oyakhilome DSc DSc DD</p>
+        <p className="text-sm italic">The President Loveworld Incorporated</p>
+      </>
+    ),
+  },
+  {
+    id: 34,
+    image: (
+      <img
+        className="absolute rounded inset-0 w-full h-full object-cover"
+        src="https://images.pexels.com/photos/16943679/pexels-photo-16943679/free-photo-of-young-girl-in-denim-jacket-and-jeans.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="img"
+      />
+    ),
+  },
+];
+

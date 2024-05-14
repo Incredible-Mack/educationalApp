@@ -28,6 +28,7 @@ export const Home = () => {
       </div>
       <section >
         <HomeGridComponent items={utilities.achivements} moreItems={utilities.moreAchievements} bgcolor={'bg-white'}  />
+        <HomeGridComponent items={utilities.meetDirectorApp} headingTexts={utilities.headingTextsApp} bgcolor={'bg-purple-900'} />
         <HomeGridComponent items={utilities.meetDirector} moreItems={utilities.members} headingTexts={utilities.headingTexts} bgcolor={'bg-purple-900'} />
         <Accordion accordionheading={accordionutili.accordionHeading}  bodyText={accordionutili.accordionBody} />
         <HomeGridComponent items={utilities.meetTheStudent} moreItems={utilities.studentmembers} headingTexts={utilities.headingTextsStudent} bgcolor={'bg-purple-900'} />
