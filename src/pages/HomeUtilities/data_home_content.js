@@ -8,9 +8,7 @@ export const achivements = [
   {
     id: 33,
     text: (
-      <p className="">
-        For nearly four centuries, people have come to Harvard in the pursuit of
-        truth, knowledge, and a better world.
+      <p className="">&nbsp;
       </p>
     ),
   },
@@ -19,58 +17,32 @@ export const achivements = [
 export const moreAchievements = [
   {
     id: 65,
-    text: <p className="text-4xl text-purple-800 "> 1636 </p>,
+    text: <p className="text-4xl text-purple-800 "> OUR SCOPE:  </p>,
     detail: (
       <p className="font-text pt-3 text-lg">
-        Harvard College students in the 2021-2022 academic year
+        To identify, raise and position high performing leaders at global ministry level towards fulfilling the global ministry expansionist agenda.
       </p>
     ),
   },
   {
     id: 2,
-    text: <p className="text-4xl text-purple-800 "> 1636 </p>,
+    text: <p className="text-4xl text-purple-800 "> OUR PASSION</p>,
     detail: (
       <p className="font-text pt-3 text-lg">
-        Harvard College students in the 2021-2022 academic year
+        To multiply and replicate the passion and results of our dear man of God in the life and ministry of these trained leaders all over the world, with the same message, delivery and impact around the world.
       </p>
     ),
   },
   {
     id: 3,
-    text: <p className="text-4xl text-purple-800 "> 1636 </p>,
+    text: <p className="text-4xl text-purple-800 "> OUR PURPOSE </p>,
     detail: (
       <p className="font-text pt-3 text-lg">
-        Harvard College students in the 2021-2022 academic year
+        To raise strategic leaders for the LoveWorld Nation
       </p>
     ),
   },
-  {
-    id: 4,
-    text: <p className="text-4xl text-purple-800 "> 1636 </p>,
-    detail: (
-      <p className="font-text pt-3 text-lg">
-        Harvard College students in the 2021-2022 academic year
-      </p>
-    ),
-  },
-  {
-    id: 5,
-    text: <p className="text-4xl text-purple-800 "> 1636 </p>,
-    detail: (
-      <p className="font-text pt-3 text-lg">
-        Harvard College students in the 2021-2022 academic year
-      </p>
-    ),
-  },
-  {
-    id: 6,
-    text: <p className="text-4xl text-purple-700 "> 1636 </p>,
-    detail: (
-      <p className="font-text pt-3 text-lg">
-        Harvard College students in the 2021-2022 academic year
-      </p>
-    ),
-  },
+ 
 ];
 
 export const headingTexts = [
