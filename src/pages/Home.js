@@ -21,10 +21,7 @@ export const Home = () => {
               ISLT
             </h1> */}
             <p className="w-3/6 text-center text-base text-slate-300">
-            The Institute of Strategic Leadership Training (ISLT) is an advanced global institute charged with the
-            responsibility of raising Strategic Leaders across the Loveworld Nation. To identify, raise and
-            position high-performing leaders at the global ministry level toward fulfilling the global ministry
-            expansionist agenda.
+            An Apex Training Centre For The Loveworld Nation Raising Strategic Leaders....Developing your skills and Maximizing your global impact
             </p>
           </div>
         </div>
