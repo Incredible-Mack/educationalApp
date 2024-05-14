@@ -6,7 +6,6 @@ import * as accordionutili from "./HomeUtilities/data_accordion";
 
 
 export const Home = () => {
- 
       
   return (
     <>
