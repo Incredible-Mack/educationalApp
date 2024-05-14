@@ -11,6 +11,7 @@ import Chat from "./student/Chat"
 import Assessment from "./student/Assessment"
 import Attendance from "./student/Attendance"
 import Profile, { profileAction } from "./student/Profile"
+import CourseVideos from "./student/CourseVideos"
 
 export const openContext = createContext()
 
@@ -28,12 +29,12 @@ export default function App() {
               <Route path="student" element={ <Layout />} >
                  <Route index element={<DashBoard />} />
                  <Route path="course" element={<Courses />} />
-                 <Route path="video" element={<VideoPlayer />} />
+                 <Route path="video/:id?" element={<VideoPlayer />} />
                  <Route path="chat" element={<Chat />} />
                  <Route path="assessment" element={<Assessment/>} />
                  <Route path="attendance" element={<Attendance/>} />
                  <Route path="profile" element={<Profile/>} action={profileAction} />
-                 <Route path="course/:id" element={}  />
+                 <Route path="course/:id" element={<CourseVideos/>}  />
                  
               </Route>
           </Route>

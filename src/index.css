@@ -122,5 +122,24 @@
     transform: rotate(45deg);
   }
 
+  .bgHome {
+    background-image: url('https://islt.oceoonline.org/assets/background-21cc42cf.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  
+  }
 
+  .filter{
+    position: absolute;
+    inset: 0;
+    height: 1000px;
+    background: rgba(255, 255, 255, 0.2);
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);;
+    z-index: -1;
+  }
+  
+  
 }

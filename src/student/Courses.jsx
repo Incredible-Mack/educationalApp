@@ -43,7 +43,7 @@ const Courses = () => {
           <>
             {courses &&
               courses.map((course) => (
-                <Link to={`./${course.id}`}>
+                <Link to={`./${course.course}`}>
                 <div className="col-span-full md:col-span-1" key={course.id}  >
                   <div className="shadow p- rounded-xl overflow-hidden ">
                     <img src={course.image} alt="icon" className="w-full " />

@@ -8,7 +8,7 @@ const Layout = () => {
   // const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-blue-50 ">
+    <div >
       <div className="flex  relative">
         {/* Fixed First Div */}
         <div

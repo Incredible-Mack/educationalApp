@@ -1,11 +1,13 @@
 import React, { useContext, useState, useEffect } from "react";
 import { openContext } from "../App";
 import Heading from "./utitlity/Heading";
+import { domain } from "./utitlity/apidomain";
 
 const Chat = () => {
   const [open] = useContext(openContext);
   const [isFixed, setIsFixed] = useState(false);
-
+  const [message, setMessage] = useState([]);
+  
     useEffect(() => {
         const grid = document.querySelector('.scroll-content'); 
         const handleScroll = () => {
@@ -21,7 +23,35 @@ const Chat = () => {
         return () => {
         grid.removeEventListener('scroll', handleScroll);
         };
+
+        
     }, []);
+
+
+    useEffect(() => {
+      
+      const apiUrl = domain + "config/api/get_chat.php";
+
+      fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          setMessage(data);
+          console.log(message)
+          // setLoading(false);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+          // setLoading(false);
+        });
+    }, [message]);
+
+
+
+
+
+
+
+
 
   return (
     <div className={`h-screen   w-full ${open ? "w-full" : "lg:w-[90vw]"} `}>
@@ -37,28 +67,43 @@ const Chat = () => {
               <div className={`bg-purple-700  ${isFixed ? 'fixed w-[70%] md:w-[47%] lg:w-[58%]' : 'w-full'}`}>
                 <div className="flex justify-between items-center">
                   <p className="font-bold text-white ">Chat</p>
-                  <div className="text-white pt-1">
+                  {/* <div className="text-white pt-1">
                     General Group
                     <button className="bg-purple-500 ml-1 text-white font-bold shadow-sm rounded-md text-sm p-1">
                       {" "}
                       Switch
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div>&nbsp;</div>
-              <div className="w-full  p-3 pt-0 mt-3   border rounded-xl overflow-hidden bg-purple-200">
-                <p className="text-xs text-gray-400 font-semibold">
-                  {" "}
-                  9:00 AM 12-July-2023{" "}
-                </p>
-                <div className=" text-sm  ">
-                  <p className="font-bold">Mack</p>
-                  <p>Hy</p>
-                </div>
-              </div>
 
-              <div className="w-full  p-3 pt-0 mt-3   border rounded-xl overflow-hidden bg-purple-100">
+
+              
+
+             { message && 
+                  message.map((msg) => (
+                    <div className="w-full  p-3 pt-0 mt-3   border rounded-xl overflow-hidden bg-purple-200">
+                      <p className="text-xs text-gray-400 font-semibold">
+                        {" "}
+                        9:00 AM 12-July-2023{" "}
+                      </p>
+                      <div className=" text-sm  ">
+                        <p className="font-bold">{msg.name}</p>
+                        <p>{msg.message}</p>
+                      </div>
+                    </div>
+
+
+                  ))
+
+             }
+
+
+{/* "name":"Mack","message":"Hy","id":1},{"name":"Jame","message":"Am excell o ooo","id":2} */}
+
+
+              {/* <div className="w-full  p-3 pt-0 mt-3   border rounded-xl overflow-hidden bg-purple-100">
                 <p className="text-xs text-gray-400 font-semibold">
                   {" "}
                   9:00 AM 12-July-2023{" "}
@@ -70,7 +115,9 @@ const Chat = () => {
                     officia
                   </p>
                 </div>
-              </div>
+              </div> */}
+
+
             </div>
           </div>
 
@@ -114,7 +161,7 @@ const Chat = () => {
 
                 <p className="text-white font-bold text-sm">Take Notes</p>
                 <textarea
-                  class="w-full h-32 px-3 py-2 text-base border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+                  className="w-full h-32 px-3 py-2 text-base border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
                   placeholder="Enter your text here..."
                 ></textarea>
                 <button className="bg-purple-700 px-6 py-3 hover:bg-purple-600 w-full mt-1 text-white rounded-md ">

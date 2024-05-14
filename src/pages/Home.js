@@ -10,17 +10,22 @@ export const Home = () => {
       
   return (
     <>
+    
       <div className="h-screen ">
-        <div className="absolute z-[-2]  top-0 h-screen w-screen bg-purple-900 ">
+        <div className="absolute z-[-2]  top-0 h-screen w-screen bgHome">
+        <div className="filter">&nbsp;</div>
           <div className="flex items-center justify-center h-screen flex-col">
-            <h1 className="text-white font-bold text-6xl md:text-[116px] text-center">
+            
+            <img src="https://islt.oceoonline.org/assets/logo-2b9fb765.png" alt="ISLT" />
+            {/* <h1 className="text-white font-bold text-6xl md:text-[116px] text-center">
               Welcome To <br />
               ISLT
-            </h1>
+            </h1> */}
             <p className="w-3/6 text-center text-base text-slate-300">
-              Where world-class professors, innovative research, and a dynamic
-              student community come together to advance education and foster
-              change in the world.
+            The Institute of Strategic Leadership Training (ISLT) is an advanced global institute charged with the
+            responsibility of raising Strategic Leaders across the Loveworld Nation. To identify, raise and
+            position high-performing leaders at the global ministry level toward fulfilling the global ministry
+            expansionist agenda.
             </p>
           </div>
         </div>
